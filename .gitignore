@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --------------------------------------------------------------- Dataset ----
+# 3.4 GB: DUTS archives, extracted images and the resized 256x256 cache.
+# Fetch from http://saliencydetection.net/duts/ then run src/build_cache.py
+data/
+
+# ------------------------------------------------------------- Run output ----
+# Logs are rewritten by every training / evaluation run.
+# out/figs/ and out/*.json ARE tracked: the report needs them to compile.
+out/*.log
+
+# Superseded development checkpoint; src/train.py regenerates it.
+params/model_dev.npz
+
+# ------------------------------------------------------- LaTeX build files ----
+# report/report.pdf itself is tracked; these are intermediates.
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+report/*.log
+report/*.out
+
+# --------------------------------------------------------- OS and editors ----
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
